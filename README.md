@@ -1,7 +1,7 @@
 # stvorka-test-ex
 
-Test exercise for Stvorka front-end dev position | HTML, CSS
+This repository contains the test exercise for the Stvorka front-end developer position. Built with HTML and CSS
 
 ## Live Demo
 
-Check out the live demo of the project [here](https://stvorka-test-ex.netlify.app/).
+Check out the live demo of the project <a href="https://stvorka-test-ex.netlify.app/" target="_blank">here</a>.
