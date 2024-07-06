@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik:wght@300..900&display=swap');
+
+:root {
+  --base-white: #fff;
+  --button-bg-color: #f4f8ff;
+  --button-hover-color: #cddfff;
+  --task-progress-border-color: rgba(255, 255, 255, 0.5);
+  --tag-color: #2364db;
+  --task-color: #3579f5;
+  --button-text-color: #4777ed;
+  --font-family: 'Inter', sans-serif;
+  --task-progress: 3%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: var(--font-family);
+  font-weight: 300;
+  background-color: var(--base-white);
+  letter-spacing: 0.004rem;
+}
+
+.task-container {
+  border-radius: 0.62rem;
+  max-width: 46.44rem;
+  background-color: var(--task-color);
+  color: var(--base-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.13rem 0.94rem 1.38rem;
+}
+
+.progress-container {
+  flex-shrink: 0;
+  margin-top: 0.23rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+      closest-side,
+      var(--task-color) 93%,
+      transparent 94% 100%
+    ),
+    conic-gradient(var(--base-white) var(--task-progress), transparent 0);
+  position: relative;
+}
+
+.progress-container::before {
+  content: '';
+  position: absolute;
+  top: 0.03rem;
+  left: 0.03rem;
+  width: 3.68rem;
+  height: 3.68rem;
+  border-radius: 50%;
+  border: 1px solid var(--task-progress-border-color);
+}
+
+.info-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: start;
+}
+
+.info-tag {
+  border-radius: 2.5rem;
+  padding: 0em 1.08em;
+  line-height: 1.5;
+  background-color: var(--tag-color);
+  font-size: 0.75rem;
+}
+
+.info-header {
+  font-size: 0.94rem;
+  font-weight: 550;
+  line-height: 133%;
+  letter-spacing: 0rem;
+}
+
+.info-text {
+  font-size: 0.75rem;
+  line-height: 150%;
+}
+
+.task-button {
+  margin-top: 0.28rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-size: 0.88rem;
+  line-height: 143%;
+  letter-spacing: 0.005rem;
+  color: var(--button-text-color);
+  background-color: var(--base-white);
+  border-radius: 0.38rem;
+  padding: 0.71em 1.79em;
+  border: none;
+}
+
+.task-button:hover {
+  background-color: var(--button-hover-color);
+}
